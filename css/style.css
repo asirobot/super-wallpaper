@@ -1,64 +1,75 @@
-/* 全局样式重置（可选，消除默认边距） */
+/* 全局样式重置（可选，消除默认边距）
+   Global style reset (optional, eliminate default margins and paddings) */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 盒模型：宽高包含内边距和边框 | Box model: width/height includes padding and border */
 }
 
-/* 容器样式（可选，控制整体宽度） */
+/* 容器样式（可选，控制整体宽度）
+   Container style (optional, control the overall width) */
 .container {
-    width: 95%;
-    margin: 20px auto;
+    width: 95%; /* 容器宽度占视口95% | Container width is 95% of the viewport */
+    margin: 20px auto; /* 上下外边距20px，左右自动居中 | Top/bottom margin 20px, left/right auto center */
 }
 
-/* 图片项容器（核心：控制图片和文字的布局） */
+/* 图片项容器（核心：控制图片和文字的布局）
+   Image item container (core: control the layout of images and text) */
 .img-item {
-    /* 表格单元格和普通div都适用的居中 */
-    text-align: center;
-    padding: 10px; /* 可选，增加内边距 */
+    text-align: center; /* 内容水平居中 | Content horizontal center */
+    padding: 10px; /* 可选，增加内边距 | Optional, add inner padding */
 }
 
-/* 链接样式：转为块级元素，方便控制 */
+/* 链接样式：转为块级元素，方便控制
+   Link style: convert to inline-block element for easy control */
 .img-item a {
-    display: inline-block; /* 行内块，不独占一行且可设置宽高 */
-    text-decoration: none; /* 去掉下划线 */
-    color: #333; /* 文字颜色 */
+    display: inline-block; /* 行内块，不独占一行且可设置宽高 | Inline-block, not exclusive line and can set width/height */
+    text-decoration: none; /* 去掉下划线 | Remove underline */
+    color: #333; /* 文字颜色 | Text color */
 }
 
-/* 图片样式：固定宽度，避免过大 */
+/* 图片样式：固定宽度，避免过大
+   Image style: fixed width to avoid oversize */
 .img-item img {
-    width: 100%; /* 可根据需求调整 */
-    height: auto; /* 保持图片比例 */
-    display: block; /* 消除图片底部的默认空白 */
-    margin: 0 auto; /* 图片本身水平居中（兜底） */
+    width: 100%; /* 可根据需求调整 | Can be adjusted according to needs */
+    height: auto; /* 保持图片比例 | Maintain image aspect ratio */
+    display: block; /* 消除图片底部的默认空白 | Eliminate default blank space at the bottom of the image */
+    margin: 0 auto; /* 图片本身水平居中（兜底） | Image horizontal center (fallback) */
 }
 
+/* 文件名样式
+   File name style */
 .file-name {
-    display: block; /* 独占一行 */
-    margin-top: 5px; /* 与图片保持间距 */
-    text-align: center; /* 文字水平居中 */
-    font-size: 14px; /* 字体大小 */
-    /* 文本溢出省略核心属性 */
-    width: 25ch; /* 限制宽度为10个字符（关键：控制字符数） */
-    margin-left: auto; /* 配合margin-right实现居中（因为设置了width） */
-    margin-right: auto; /* 保持居中 */
-    white-space: nowrap; /* 强制文本单行显示 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    text-overflow: ellipsis; /* 溢出部分显示省略号 */
+    display: block; /* 独占一行 | Exclusive line */
+    margin-top: 5px; /* 与图片保持间距 | Spacing with the image */
+    text-align: center; /* 文字水平居中 | Text horizontal center */
+    font-size: 14px; /* 字体大小 | Font size */
+    /* 文本溢出省略核心属性
+       Core properties for text overflow ellipsis */
+    width: 25ch; /* 限制宽度为25个字符（关键：控制字符数） | Limit width to 25 characters (key: control character count) */
+    margin-left: auto; /* 配合margin-right实现居中（因为设置了width） | Cooperate with margin-right to center (because width is set) */
+    margin-right: auto; /* 保持居中 | Keep center */
+    white-space: nowrap; /* 强制文本单行显示 | Force text to display in a single line */
+    overflow: hidden; /* 隐藏溢出内容 | Hide overflow content */
+    text-overflow: ellipsis; /* 溢出部分显示省略号 | Display ellipsis for overflow part */
 }
 
-/* 表格样式（可选，优化表格布局） */
+/* 表格样式（可选，优化表格布局）
+   Table style (optional, optimize table layout) */
 .img-table {
-    width: 100%;
-    border-collapse: collapse; /* 合并表格边框 */
+    width: 100%; /* 表格宽度100% | Table width 100% */
+    border-collapse: collapse; /* 合并表格边框 | Merge table borders */
 }
 
+/* 表格单元格样式
+   Table cell style */
 .img-table td {
-    vertical-align: top; /* 单元格内容顶部对齐 */
+    vertical-align: top; /* 单元格内容顶部对齐 | Cell content top alignment */
 }
 
-/* 标题样式（可选，增加间距） */
+/* 标题样式（可选，增加间距）
+   Heading style (optional, add spacing) */
 h1 {
-    margin: 20px 0;
-    color: #333;
+    margin: 20px 0; /* 上下外边距20px，左右无 | Top/bottom margin 20px, left/right 0 */
+    color: #333; /* 文字颜色 | Text color */
 }
