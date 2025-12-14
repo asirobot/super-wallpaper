@@ -27,7 +27,7 @@
 
 /* 图片样式：固定宽度，避免过大 */
 .img-item img {
-    width: 33%; /* 可根据需求调整 */
+    width: 100%; /* 可根据需求调整 */
     height: auto; /* 保持图片比例 */
     display: block; /* 消除图片底部的默认空白 */
     margin: 0 auto; /* 图片本身水平居中（兜底） */
