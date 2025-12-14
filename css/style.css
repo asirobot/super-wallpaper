@@ -1,0 +1,9 @@
+/* 文件名样式：处理文本溢出 | File name styles: Handle text overflow */
+.file-name {
+    display: block; /* 独占一行 | Occupy a single line */
+    white-space: nowrap; /* 强制文本单行显示 | Force text to single line */
+    overflow: hidden; /* 隐藏溢出的文本 | Hide overflow text */
+    text-overflow: ellipsis; /* 溢出部分显示省略号 | Show ellipsis for overflow text */
+    text-align: center; /* 文本居中对齐（可选，提升视觉效果） | Center text alignment (optional, improve visual effect) */
+    font-size: 14px; /* 文件名字体大小 | File name font size */
+}
