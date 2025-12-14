@@ -1,9 +1,58 @@
-/* 文件名样式：处理文本溢出 | File name styles: Handle text overflow */
+/* 全局样式重置（可选，消除默认边距） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 容器样式（可选，控制整体宽度） */
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* 图片项容器（核心：控制图片和文字的布局） */
+.img-item {
+    /* 表格单元格和普通div都适用的居中 */
+    text-align: center;
+    padding: 10px; /* 可选，增加内边距 */
+}
+
+/* 链接样式：转为块级元素，方便控制 */
+.img-item a {
+    display: inline-block; /* 行内块，不独占一行且可设置宽高 */
+    text-decoration: none; /* 去掉下划线 */
+    color: #333; /* 文字颜色 */
+}
+
+/* 图片样式：固定宽度，避免过大 */
+.img-item img {
+    width: 33%; /* 可根据需求调整 */
+    height: auto; /* 保持图片比例 */
+    display: block; /* 消除图片底部的默认空白 */
+    margin: 0 auto; /* 图片本身水平居中（兜底） */
+}
+
+/* 文件名span样式：居中并独占一行 */
 .file-name {
-    display: block; /* 独占一行 | Occupy a single line */
-    white-space: nowrap; /* 强制文本单行显示 | Force text to single line */
-    overflow: hidden; /* 隐藏溢出的文本 | Hide overflow text */
-    text-overflow: ellipsis; /* 溢出部分显示省略号 | Show ellipsis for overflow text */
-    text-align: center; /* 文本居中对齐（可选，提升视觉效果） | Center text alignment (optional, improve visual effect) */
-    font-size: 14px; /* 文件名字体大小 | File name font size */
+    display: block; /* 独占一行，实现文字在图片下方 */
+    margin-top: 5px; /* 与图片保持间距 */
+    text-align: center; /* 文字水平居中（核心） */
+    font-size: 14px; /* 可选，调整字体大小 */
+}
+
+/* 表格样式（可选，优化表格布局） */
+.img-table {
+    width: 100%;
+    border-collapse: collapse; /* 合并表格边框 */
+}
+
+.img-table td {
+    vertical-align: top; /* 单元格内容顶部对齐 */
+}
+
+/* 标题样式（可选，增加间距） */
+h1 {
+    margin: 20px 0;
+    color: #333;
 }
