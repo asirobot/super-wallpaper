@@ -18,6 +18,12 @@
             <span class="file-name">icebergUnderBusStop.png</span>
         </a>
     </div>
+    <div>
+        <div><img src="./image/png/icebergUnderBusStop.png" alt="icebergUnderBusStop.png" width="33%"></div>
+        <div style="text-align: center;width: 33%;">
+            <a href="" style="text-decoration: none;"><span style="color: black;">icebergUnderBusStop.png</span></a>
+        </div>
+    </div>
     <h1>第1期</h1>
     <table border="1" class="img-table">
         <tr>
