@@ -33,12 +33,18 @@
     margin: 0 auto; /* 图片本身水平居中（兜底） */
 }
 
-/* 文件名span样式：居中并独占一行 */
 .file-name {
-    display: block; /* 独占一行，实现文字在图片下方 */
+    display: block; /* 独占一行 */
     margin-top: 5px; /* 与图片保持间距 */
-    text-align: center; /* 文字水平居中（核心） */
-    font-size: 14px; /* 可选，调整字体大小 */
+    text-align: center; /* 文字水平居中 */
+    font-size: 14px; /* 字体大小 */
+    /* 文本溢出省略核心属性 */
+    width: 25ch; /* 限制宽度为10个字符（关键：控制字符数） */
+    margin-left: auto; /* 配合margin-right实现居中（因为设置了width） */
+    margin-right: auto; /* 保持居中 */
+    white-space: nowrap; /* 强制文本单行显示 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    text-overflow: ellipsis; /* 溢出部分显示省略号 */
 }
 
 /* 表格样式（可选，优化表格布局） */
